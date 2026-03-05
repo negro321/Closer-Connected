@@ -13,21 +13,28 @@ export default {
     extend: {
       colors: {
         brand: {
-          900: "#1E3A8A", // primary
-          800: "#1e40af",
-          700: "#1d4ed8",
-          600: "#2563eb",
-          500: "#3b82f6",
-          400: "#60A5FA", // secondary
+          900: "var(--cc-text)", // Was #1E3A8A
+          800: "var(--cc-primary-dark)", // Was #1e40af
+          700: "var(--cc-primary-dark)", // Was #1d4ed8
+          600: "var(--cc-primary)", // Was #2563eb
+          500: "#3b82f6", // Keeping intermediate shades for gradients/charts if needed
+          400: "#60A5FA",
           300: "#93c5fd",
           200: "#bfdbfe",
           100: "#dbeafe",
           50: "#eff6ff",
         },
         accent: {
-          DEFAULT: "#10B981", // green
+          DEFAULT: "var(--cc-accent)", // Was #10B981
           hover: "#059669",
+          500: "var(--cc-accent)", // Alias for consistency
+          600: "#059669", // Darker shade
         },
+        // Semantic aliases
+        border: "var(--cc-border)",
+        background: "var(--cc-bg)",
+        "background-soft": "var(--cc-bg-soft)",
+        muted: "var(--cc-muted)",
       },
     },
   },
