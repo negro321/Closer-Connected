@@ -6,17 +6,18 @@ Este es el repositorio del proyecto **Closer Connected**, una plataforma web des
 
 ## Estructura del Proyecto
 
-El proyecto ha sido reorganizado para tener una estructura plana en la carpeta `src/`. Todos los componentes, páginas y utilidades se encuentran directamente en `src/` para facilitar el acceso y evitar anidamientos complejos.
+El proyecto ha sido reorganizado para tener una estructura **totalmente plana** en la raíz. Todos los componentes, páginas y utilidades se encuentran directamente en la carpeta principal para facilitar el acceso y evitar anidamientos complejos.
 
 ### Archivos Principales
 
-- `src/App.tsx`: Componente principal de la aplicación y configuración de rutas.
-- `src/main.tsx`: Punto de entrada de la aplicación.
-- `src/Home.tsx`: Página de inicio (Landing Page).
-- `src/CompanyApply.tsx`: Página de aplicación para empresas.
-- `src/CompanyApplyForm.tsx`: Formulario de registro para empresas.
-- `src/Navbar.tsx`: Barra de navegación.
-- `src/Footer.tsx`: Pie de página.
+- `App.tsx`: Componente principal de la aplicación y configuración de rutas.
+- `main.tsx`: Punto de entrada de la aplicación.
+- `pages.tsx`: Contiene las páginas `Home` y `CompanyApply`.
+- `layout.tsx`: Contiene `Navbar` y `Footer`.
+- `sections.tsx`: Contiene todas las secciones de la Landing Page.
+- `forms.tsx`: Contiene los formularios de la aplicación.
+- `components.tsx`: Componentes UI reutilizables.
+- `utils.ts`: Utilidades y hooks.
 
 ## Instalación y Ejecución
 
@@ -43,6 +44,27 @@ Para ejecutar este proyecto localmente, sigue estos pasos:
     ```bash
     npm run build
     ```
+    Esto generará una carpeta `dist` con los archivos listos para desplegar.
+
+## Despliegue en GitHub Pages
+
+Para desplegar en GitHub Pages:
+
+1.  Sube este repositorio a GitHub.
+2.  Ve a la pestaña **Settings** > **Pages**.
+3.  En **Source**, selecciona **GitHub Actions**.
+4.  GitHub detectará automáticamente que es un proyecto Vite y sugerirá un flujo de trabajo.
+5.  O alternativamente, puedes usar el paquete `gh-pages` para desplegar la carpeta `dist` a la rama `gh-pages`.
+
+## Despliegue en Vercel
+
+Este proyecto está configurado para desplegarse fácilmente en [Vercel](https://vercel.com/).
+
+1.  Sube este repositorio a GitHub.
+2.  Importa el proyecto en Vercel.
+3.  Vercel detectará automáticamente que es un proyecto **Vite**.
+4.  La configuración de construcción (`Build Command`) debería ser `npm run build`.
+5.  El directorio de salida (`Output Directory`) debería ser `dist`.
 
 ## Tecnologías Utilizadas
 
@@ -52,8 +74,3 @@ Para ejecutar este proyecto localmente, sigue estos pasos:
 - **Tailwind CSS**: Framework de CSS para estilizado rápido.
 - **React Router**: Enrutamiento para aplicaciones de una sola página (SPA).
 - **Lucide React**: Iconos SVG.
-
-## Notas Adicionales
-
-- La integración con WhatsApp está configurada para redirigir al número `+1 585-676-6514`.
-- El formulario de empresas valida los campos y redirige a WhatsApp con la información precargada.

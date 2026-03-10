@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: "class",
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./*.{js,ts,jsx,tsx}"],
   theme: {
     container: {
       center: true,
@@ -11,6 +11,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
+      },
       colors: {
         brand: {
           900: "var(--cc-text)", // Was #1E3A8A
